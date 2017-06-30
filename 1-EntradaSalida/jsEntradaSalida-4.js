@@ -4,8 +4,12 @@
 */
 function Mostar()
 {
-	var nombre
-	nombre = prompt()
+	var nombre 
+	nombre= prompt();
+	getElementById= nombre;
+	alert(getElementById).value
+	
+
 	
 }
 
