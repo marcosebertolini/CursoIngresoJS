@@ -13,6 +13,8 @@ var numusuario;
 function comenzar()
 {
   numeroSecreto=parseInt(Math.random()*100)+1
+  contadorIntentos=0
+  numusuario=0
 }
 
 function verificar()
@@ -24,11 +26,13 @@ if(numusuario==numeroSecreto)
 {
   alert("GANASTE! en tan solo "+contadorIntentos+" oportunidades");
 }
+
 else
 {
   if(numusuario<numeroSecreto)
   {
-    alert("UN POCO MAS!")
+    parseInt()
+    alert("UN POCO MAS!"+(numeroSecreto-numusuario));
   }
   else
   {
