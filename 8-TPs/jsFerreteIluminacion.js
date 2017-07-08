@@ -35,6 +35,8 @@ function CalcularPrecio ()
         else
         {
             if(lampara==4 && marca=="ArgentinaLuz"|| marca=="FelipeLamparas")
+            resultado = (lamparas * precio)*0.25
+
         }
     }
 }
