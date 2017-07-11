@@ -38,5 +38,15 @@ function CalcularPrecio ()
             resultado = (lamparas * precio)*0.25
 
         }
+        if(lampara==3)
+        {
+            if(marca=="ArgentinaLuz")
+            {
+                resultado = lampara*precio*0.15
+                resultadoF = (lampara*precio)-resultado
+                document.getElementById("precioDescuento").value = resultadoF
+            }
+            
+        }
     }
 }
