@@ -31,7 +31,7 @@ function Mostrar()
 		acupos+=num;
 		contpos++;
 	}
-	if(num==0)
+	else
 	{
 		contcero++;
 	}
@@ -41,14 +41,58 @@ function Mostrar()
 	}
     respuesta=confirm("desea seguir???")
 	}//endwhile
-	promepos=contpos/acupos;
-    promeneg= contneg/acuneg;
+	promepos=acupos/contpos;
+    promeneg= acuneg/contneg;
 	diferencia= contpos-contneg;
-	document.write(diferencia+promepos+promeneg);
-
+	document.write (diferencia,promepos,promeneg);
+	if(isNaN(promepos))
+	{
+		promepos="No ingreso numeros positivos..."
+	}
+	if(diferencia<0)
+	{
+		diferencia*=-1;
+    }
+	if(isNaN(contneg))
+	{
+		promeneg="no ingreso numeros negativos..."
+	}
     
 
 
 
 
 }//FIN DE LA FUNCIÓN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
