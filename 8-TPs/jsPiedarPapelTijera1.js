@@ -5,7 +5,10 @@ El jugador seleccionará una imagen correspondiente
 a su opción  y le informaremos si ganó, empató o perdió.
 */
 var eleccionMaquina;
-var usuario;
+var resultado;
+var contgano=0;
+var contperdio=0;
+var contempato=0;
 function comenzar()
 {
 	eleccionMaquina=Math.floor(Math.random()*3)+1
@@ -14,50 +17,71 @@ function comenzar()
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
+    comenzar()
 switch(eleccionMaquina)
 {
     case 1:
-    alert("EMPATE")
+    resultado="Empato";
+    contempato++;
     break;
     case 2:
-    alert("PERDIO");
+    contperdio++;
+    resultado="Perdio";
     break;
     case 3:
-    alert("GANO");
+    contgano++;
+    resultado="Gano";
     break;
     
 }
-
+mostrar()
 }//FIN DE LA FUNCIÓN
 function papel()
 {
+    comenzar()
     switch(eleccionMaquina)
     {
         case 1:
-        alert("GANO");
+        contgano++;
+        resultado="Gano"
         break;
         case 2:
-        alert("EMPATE");
+        contempato++;
+        resultado="Empato";
         break;
         case 3:
-        alert("PERDIO");
+        contperdio++;
+        resultado="Perdio";
         break;
     }
-
+mostrar()
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
+    comenzar()
     switch(eleccionMaquina)
     {
         case 1:
-        alert("PERDIO");
+        contperdio++;
+        resultado="Perdio";
         break;
         case 2:
-        alert("GANO");
+        contgano++;
+        resultado="Gano"
         break;
         case 3:
-        alert("EMPATE");
+        contempato++;
+        resultado="Empato";
         break;
     }
-
+mostrar()
 }//FIN DE LA FUNCIÓN
+function mostrar()
+{
+    if(contgano>contperdio+contempato)
+    {
+        contgano-=1
+    }
+    alert(" Usted  "+resultado+ " Ganadas "+contgano+" Empatadas "+contempato+" Perdidas "+contperdio);
+    
+}
