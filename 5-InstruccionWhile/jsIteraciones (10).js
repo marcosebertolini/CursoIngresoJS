@@ -44,13 +44,17 @@ function Mostrar()
 	promepos=acupos/contpos;
     promeneg= acuneg/contneg;
 	diferencia= contpos-contneg;
-	document.write (diferencia,promepos,promeneg);
+	document.write (diferencia  ,    promepos,   promeneg);
 	if(isNaN(promepos))
 	{
 		promepos="No ingreso numeros positivos..."
 	}
 	if(diferencia<0)
 	{
+		while(isNaN(diferencia))
+		{
+			diferencia="No ingreso numeros negativos"
+		}
 		diferencia*=-1;
     }
 	if(isNaN(contneg))

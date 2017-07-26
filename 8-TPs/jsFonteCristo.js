@@ -11,3 +11,17 @@ function ComenzarIngreso ()
 {
  	
 }
+function NumerosPares()
+{
+    var contpares=0;
+    var i=prompt("Ingrese un Número : ")
+    i=parseInt(i);
+    for(cont=0;cont<i;cont++)
+    {
+        if(i%2==0)
+        {
+            contpares++;
+        }
+    }
+    alert(contpares);
+}
